@@ -1,12 +1,17 @@
-# ㆔ IO3
+# 🐧🐦🐤 IO3
 3가지 IO 프로젝트를 수행하고 자신감을 얻으세요.
 
-## ☯︎ What is IO3?
+## 🐧 What is IO3?
 IO3는 Standard I/O, File I/O, Network I/O를 기반으로 한 세 가지 프로그램을 완성하여, 새로운 언어에 빠르게 적응하고 자신감을 얻을 수 있도록 고안된 구현 문제집입니다.
 
-## ☯︎ Problems
-### ⼀ Hello Porro ❀
-Standard I/O를 이용한 기본적인 입출력을 연습합니다.
+## 🐦 How to run?
+추가 예정
+
+## 🐤 Problems
+### 1️⃣ Hello Porro 
+난이도 🟩
+
+| Standard I/O를 이용한 기본적인 입출력을 연습합니다.
 
 **요구사항**
 - 프로그램이 시작되면 "이름을 입력하세요: " 를 출력하고 Standard Input으로 입력을 받습니다.
@@ -22,8 +27,10 @@ Standard I/O를 이용한 기본적인 입출력을 연습합니다.
 Hello Porro
 ```
 ---
-### ⼆ Hello JSON ❀❀
-JSON 형식의 파일을 읽어와 연산을 수행하고, JSON 형식으로 파일에 출력합니다.
+### 2️⃣ Hello JSON
+난이도 🟩🟩
+
+| JSON 형식의 파일을 읽어와 연산을 수행하고, JSON 형식으로 파일에 출력합니다.
 
 **요구사항**
 - 다음 형태의 JSON 파일(`in.json`)이 주어집니다.
@@ -49,8 +56,10 @@ JSON 형식의 파일을 읽어와 연산을 수행하고, JSON 형식으로 파
   - 예: `age < 22`, `name = "Pedro Porro"`
 
 ---
-### ㆔ Hello HTTP ❀❀❀
-Server/Client간 HTTP 통신을 구현합니다.
+### 3️⃣ Hello HTTP
+난이도 🟩🟩🟩
+
+| Server/Client간 HTTP 통신을 구현합니다.
 
 **요구사항**
 - 서버는 `localhost:333`에 연결되어 클라이언트의 요청을 받습니다.
