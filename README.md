@@ -28,6 +28,6 @@ IO3는 해결해야 할 문제를 알려줄 뿐 해답을 주지 않습니다. �
 ## 🐤 Problems
 아래 링크를 들어가면 각각의 문제에 대한 설명이 나와있습니다. 괄호 안의 🔥 개수는 문제의 난이도를 의미합니다.
 - [hello](https://github.com/wwingyou/io3/blob/main/hello.md) (🔥)
-- [query](https://github.com/wwingyou/io3/blob/main/hello.md) (🔥🔥)
-- [bird](https://github.com/wwingyou/io3/blob/main/hello.md) (🔥🔥🔥)
+- [query](https://github.com/wwingyou/io3/blob/main/query.md) (🔥🔥)
+- [bird](https://github.com/wwingyou/io3/blob/main/bird.md) (🔥🔥🔥)
 
