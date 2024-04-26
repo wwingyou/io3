@@ -26,80 +26,8 @@ IO3는 해결해야 할 문제를 알려줄 뿐 해답을 주지 않습니다. �
 문제별로 언어의 문법 이외에 알아야 할 배경지식이 있습니다. 만약 배경지식을 모른다면 배경지식을 먼저 공부하고 프로젝트를 진행하세요.
 
 ## 🐤 Problems
-### 1️⃣ `hello` 
-난이도 🔥
+아래 링크를 들어가면 각각의 문제에 대한 설명이 나와있습니다. 괄호 안의 🔥 개수는 문제의 난이도를 의미합니다.
+- [hello](https://github.com/wwingyou/io3/blob/main/hello.md) (🔥)
+- [query](https://github.com/wwingyou/io3/blob/main/hello.md) (🔥🔥)
+- [bird](https://github.com/wwingyou/io3/blob/main/hello.md) (🔥🔥🔥)
 
-| Standard I/O를 이용한 기본적인 입출력을 연습합니다.
-
-**요구사항**
-- 프로그램이 시작되면 "이름을 입력하세요: " 를 출력하고 Standard Input으로 입력을 받습니다.
-- 이름을 다음 형식으로 출력합니다. "Hello <이름>"
-
-**입력**
-```bash
-이름을 입력하세요: Porro
-```
-
-**출력**
-```bash
-Hello Porro
-```
----
-### 2️⃣ `query`
-난이도 🔥🔥
-
-| JSON 형식의 파일을 읽어와 연산을 수행하고, JSON 형식으로 파일에 출력합니다.
-
-**요구사항**
-- 다음 형태의 JSON 파일(`in.json`)이 주어집니다.
-```JSON
-[
-  {
-    "name": "Pedro Porro",
-    "age": 24,
-    "position": "RWB"
-  },
-  {
-    "name": "Destiny Udogie",
-    "age": 21,
-    "position": "LWB"
-  }
-]
-```
-- 프로그램이 시작되면 이 파일을 읽어와 정보를 저장합니다.
-- 프로그램은 `column operator data` 형식의 쿼리를 인자로 받아 결과를 `out.json`에 출력합니다.
-  - `column`은 JSON 오브젝트의 각 컬럼명을 의미합니다.
-  - `opeartor`는 `=`, `>`, `<` 세 가지가 있습니다.
-  - `data`는 각 컬럼에 해당하는 데이터입니다.
-  - 예: `age < 22`, `name = "Pedro Porro"`
-
----
-### 3️⃣ `bird`
-난이도 🔥🔥🔥
-
-| Server/Client간 HTTP 통신을 구현합니다.
-
-**요구사항**
-- 서버는 `localhost:333`에 연결되어 클라이언트의 요청을 받습니다.
-- 클라이언트와 서버는 HTTP 프로토콜에 따라 통신합니다.
-- 서버는 다음 URI에 대한 API 요청을 처리할 수 있어야 합니다.
-
-|Method|URI|Description|
-|------|------|--------|
-|GET|/bird|모든 새 이름을 가져옵니다.|
-|POST|/bird|새 이름을 등록합니다.|
-|GET|/bird/{id}|{id}에 해당하는 새 이름을 가져옵니다.|
-|PUT|/bird/{id}|{id}에 해당하는 새 이름을 바꿉니다.|
-|DELETE|/bird/{id}|{id}에 해당하는 새를 지웁니다.|
-
-- 클라이언트는 `method uri data` 형식의 인자를 받습니다.
-  - `method`는 서버로 보낼 요청 메소드로, `get`, `post`, `put`, `delete`가 있습니다.
-  - `uri`는 요청의 URI입니다.
-  - `data`는 요청의 페이로드에 담길 데이터입니다.
-  - 예: `get /player`, `put /player/1 "Pedro Porro"`
-- 클라이언트가 서버로부터 받은 응답코드에 따라 알맞은 작업을 수행합니다.
-  - `2xx`: 결과를 Standard Out에 출력합니다.
-  - `3xx`: 응답 헤더에 담긴 내용에 맞게 서버로 다시 요청을 보냅니다.
-  - `4xx`: 결과를 Standard Error에 출력합니다.
-
----
