@@ -1,0 +1,17 @@
+[
+  {
+    "name": "penguin",
+    "age": 4,
+    "living_place": "antarctic"
+  },
+  {
+    "name": "blue bird",
+    "age": 2,
+    "living_place": "yokohama"
+  },
+  {
+    "name": "chicka",
+    "age": 1,
+    "living_place": "barn"
+  }
+]
