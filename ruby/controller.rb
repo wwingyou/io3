@@ -32,7 +32,7 @@ class Controller
           return @instance.send(handler.handler_method, *match[1..], headers: headers, body: body)
         end
       end
-      throw NoHandlerError
+      raise NoHandlerError
     end
 
     def get_mapping(pattern)
