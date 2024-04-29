@@ -11,6 +11,6 @@ end
 
 def redirect_response(uri)
   headers = DEFAULT_HEADERS.dup
-  headers['Location'] = uri
+  headers[:Location] = uri
   Response.new(302, 'See Other', headers, '')
 end
