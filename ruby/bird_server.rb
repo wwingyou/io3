@@ -2,22 +2,16 @@
 
 require 'socket'
 require './bird_controller'
+require './response'
 
 socket = TCPServer.new(333)
-
-Response = Struct.new(:code, :message, :headers, :body) do
-  def to_s
-    "HTTP/1.1 #{code} #{message}\r\n\
-#{headers.map { |k, v| "#{k}: #{v}" }.join("\r\n")}\r\n\
-\r\n\
-#{body}"
-  end
-end
 
 BirdController.new
 
 def do_request(method, uri, headers, body)
   result = BirdController.do_handler(method, uri, headers, body)
+  return result if result.is_a? Response
+
   headers = DEFAULT_HEADERS.dup
   headers[:'Content-Length'] = result.bytes.length
   Response.new(200, 'OK', headers, result)

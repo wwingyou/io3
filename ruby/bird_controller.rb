@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require './controller'
+require './response.rb'
 
 # Bird controller
 class BirdController < Controller
@@ -17,7 +18,7 @@ class BirdController < Controller
   post_mapping(%r{^/bird$})
   def add_bird(body:, **_)
     @birds.push(body)
-    @birds.length.to_s
+    redirect_response "/bird/#{@birds.length}"
   end
 
   get_mapping(%r{^/bird/(\d+)$})
@@ -28,10 +29,12 @@ class BirdController < Controller
   put_mapping(%r{^/bird/(\d+)$})
   def chage_bird(id, body:, **_)
     @birds[id.to_i - 1] = body
+    redirect_response "/bird/#{@birds.length}"
   end
 
   delete_mapping(%r{^/bird/(\d+)$})
   def delete_bird(id, **_)
     @birds.delete_at(id.to_i - 1)
+    redirect_response '/bird'
   end
 end
