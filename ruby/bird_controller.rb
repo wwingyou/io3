@@ -5,7 +5,7 @@ require './controller'
 # Bird controller
 class BirdController < Controller
   def initialize
-    super self
+    super
     @birds = []
   end
 
