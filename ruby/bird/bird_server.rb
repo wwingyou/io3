@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'socket'
-require './bird_controller'
-require './response'
+require_relative './bird_controller'
+require_relative './response'
 
 socket = TCPServer.new(333)
 
